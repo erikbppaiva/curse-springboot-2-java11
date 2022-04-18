@@ -1,13 +1,13 @@
-package com.educandoweb.curso;
+package com.educandoweb.curse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CursoApplication {
+public class CurseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CursoApplication.class, args);
+		SpringApplication.run(CurseApplication.class, args);
 	}
 
 }
