@@ -1,4 +1,4 @@
-package com.educandoweb.curse.service.exceptions;
+package com.educandoweb.curse.services.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 

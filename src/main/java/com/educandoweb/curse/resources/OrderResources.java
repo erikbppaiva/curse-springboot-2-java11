@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.educandoweb.curse.entities.Order;
-import com.educandoweb.curse.service.OrderService;
+import com.educandoweb.curse.services.OrderService;
 
 @RestController
 @RequestMapping(value = "/orders")
