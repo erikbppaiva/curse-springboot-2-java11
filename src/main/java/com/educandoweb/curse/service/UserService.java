@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.educandoweb.curse.entities.User;
 import com.educandoweb.curse.respositories.UserRepository;
+import com.educandoweb.curse.service.exceptions.ResourceNotFoundException;
 
 @Service
 public class UserService {
@@ -20,7 +21,7 @@ public class UserService {
 	}
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		return obj.get(); 
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 	
 	public User insert(User obj) {
@@ -33,6 +34,7 @@ public class UserService {
 	
 	
 	public User update(Long id, User obj) {		
+		@SuppressWarnings("deprecation")
 		User entity = repository.getOne(id);
 		updateData(entity,obj);
 		return repository.save(entity);
